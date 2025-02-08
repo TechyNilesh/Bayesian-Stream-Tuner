@@ -1,0 +1,5 @@
+capymoa==0.8.2
+moa==0.11.24
+numpy==2.2.2
+psutil==6.1.1
+scipy==1.15.1
