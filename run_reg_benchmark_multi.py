@@ -240,7 +240,7 @@ if __name__ == '__main__':
     for dataset in datasets:
         print(f"Running benchmark for {dataset}")
         for run_count in range(num_runs):
-            seed = random.randint(1, 1000)
+            seed = random.randint(1, 100)
             print(f"  Run {run_count} with seed {seed}")
             try:
                 evaluate_models(dataset, run_count=run_count, seed=seed)
