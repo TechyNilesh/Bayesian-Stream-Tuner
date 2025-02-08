@@ -86,3 +86,7 @@ python bst_parameter_analysis.py
 ```
 
 Results will be saved in their respective directories (RESULTS_MULTI/, RESULTS_REG_MULTI/, etc.).
+
+## Note
+All experimental output files can be provided upon request. Please contact the authors for access to detailed results and analysis files.
+
