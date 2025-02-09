@@ -1,5 +1,4 @@
 from StreamTunner.BayesianStreamTuner import BayesianStreamTunerClassifier
-from StreamTunner.BayesianStreamTunerSimple import BayesianStreamTunerClassifierSimple
 from StreamTunner.SSPT import SSPTClassifier
 from StreamTunner.MESSPT import MESSPTClassifier
 from StreamTunner.RandomStreamSearch import RandomStreamSearchClassifier

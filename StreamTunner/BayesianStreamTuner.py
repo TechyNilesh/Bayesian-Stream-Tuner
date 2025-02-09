@@ -147,10 +147,8 @@ class BayesianStreamTunerClassifier(Classifier):
             if p_type in (int, float):
                 vector.append(float(params.get(param, p_range[0])))
             else:
-                # One-hot encoding for categorical parameters
-                value = params.get(param, p_range[0])
-                one_hot = [1.0 if cat == value else 0.0 for cat in p_range]
-                vector.extend(one_hot)
+                vector.append(
+                    float(p_range.index(params.get(param, p_range[0]))))
         return np.array(vector)
 
     def _vector_to_params(self, vector):
@@ -158,15 +156,13 @@ class BayesianStreamTunerClassifier(Classifier):
         idx = 0
         for param, p_data in self.params_range.items():
             p_type, p_range = p_data
-            if p_type in (int, float):
-                params[param] = p_type(vector[idx])
-                idx += 1
+            if p_type == int:
+                params[param] = int(round(vector[idx]))
+            elif p_type == float:
+                params[param] = float(vector[idx])
             else:
-                # Convert one-hot back to category
-                n_cats = len(p_range)
-                one_hot = vector[idx:idx + n_cats]
-                params[param] = p_range[np.argmax(one_hot)]
-                idx += n_cats
+                params[param] = p_range[int(round(vector[idx]))]
+            idx += 1
         return params
 
     def _extract_statistical_features(self):
@@ -493,10 +489,8 @@ class BayesianStreamTunerRegressor(Regressor):
             if p_type in (int, float):
                 vector.append(float(params.get(param, p_range[0])))
             else:
-                # One-hot encoding for categorical parameters
-                value = params.get(param, p_range[0])
-                one_hot = [1.0 if cat == value else 0.0 for cat in p_range]
-                vector.extend(one_hot)
+                vector.append(
+                    float(p_range.index(params.get(param, p_range[0]))))
         return np.array(vector)
 
     def _vector_to_params(self, vector):
@@ -504,15 +498,13 @@ class BayesianStreamTunerRegressor(Regressor):
         idx = 0
         for param, p_data in self.params_range.items():
             p_type, p_range = p_data
-            if p_type in (int, float):
-                params[param] = p_type(vector[idx])
-                idx += 1
+            if p_type == int:
+                params[param] = int(round(vector[idx]))
+            elif p_type == float:
+                params[param] = float(vector[idx])
             else:
-                # Convert one-hot back to category
-                n_cats = len(p_range)
-                one_hot = vector[idx:idx + n_cats]
-                params[param] = p_range[np.argmax(one_hot)]
-                idx += n_cats
+                params[param] = p_range[int(round(vector[idx]))]
+            idx += 1
         return params
 
     def _extract_statistical_features(self):

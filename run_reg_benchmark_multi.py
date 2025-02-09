@@ -2,7 +2,6 @@ from capymoa.stream import Stream
 from moa.streams import FilteredStream  # type: ignore
 from moa.streams.filters import StandardisationFilter, NormalisationFilter, RandomProjectionFilter  # type: ignore
 from StreamTunner.BayesianStreamTuner import BayesianStreamTunerRegressor
-from StreamTunner.BayesianStreamTunerSimple import BayesianStreamTunerRegressorSimple
 from StreamTunner.SSPT import SSPTRegressor
 from StreamTunner.MESSPT import MESSPTRegressor
 from StreamTunner.RandomStreamSearch import RandomStreamSearchRegressor
@@ -179,8 +178,8 @@ def evaluate_models(dataset, window_size=1000, run_count=None, seed=None):
                 evaluator.update(instance.y_value, prediction)
                 model.train(instance)
                 instances_processed += 1
-                # if instances_processed % 1000 == 0:
-                #     print(f"  {instances_processed} instances processed")
+                if instances_processed % 1000 == 0:
+                    print(f"  {instances_processed} instances processed")
             except Exception as e:
                 print(f"Error processing instance {instances_processed}: {e}")
                 continue
