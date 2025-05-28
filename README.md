@@ -1,12 +1,12 @@
 # Bayesian Stream Tuner (BST)
 
-This is the anonymous code repository for "Bayesian Stream Tuner: Dynamic Hyperparameter Optimization for Real-Time Data Streams" submitted to KDD 2025.
+This is the code repository for "Bayesian Stream Tuner: Dynamic Hyperparameter Optimization for Real-Time Data Streams" published in KDD 2025.
 
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone [ANONYMOUS_REPOSITORY_URL]
+git clone https://github.com/TechyNilesh/Bayesian-Stream-Tuner.git
 cd bayesian-stream-tuner
 ```
 
@@ -87,6 +87,19 @@ python bst_parameter_analysis.py
 
 Results will be saved in their respective directories (RESULTS_MULTI/, RESULTS_REG_MULTI/, etc.).
 
+## Citation
+
+If you use this code in your research, please cite our paper:
+
+```
+Nilesh Verma, Albert Bifet, Bernhard Pfahringer, and Maroua Bahri. 2025.
+Bayesian Stream Tuner: Dynamic Hyperparameter Optimization for Real-
+Time Data Streams. In Proceedings of the 31st ACM SIGKDD Conference
+on Knowledge Discovery and Data Mining V.2 (KDD '25), August 3–7, 2025,
+Toronto, ON, Canada. ACM, New York, NY, USA, 12 pages. https://doi.org/
+10.1145/3711896.3736852
+```
+
 ## Note
-All experimental output files can be provided upon request. Please contact the authors for access to detailed results and analysis files.
+For any questions or issues, please contact the authors or create an issue in this repository.
 
