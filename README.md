@@ -2,6 +2,8 @@
 
 This is the code repository for "Bayesian Stream Tuner: Dynamic Hyperparameter Optimization for Real-Time Data Streams" published in KDD 2025.
 
+[![DOI](https://zenodo.org/badge/929142793.svg)](https://doi.org/10.5281/zenodo.15531987)
+
 ## Installation
 
 1. Clone the repository:
