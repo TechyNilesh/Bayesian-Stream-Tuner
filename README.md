@@ -91,16 +91,6 @@ Results will be saved in their respective directories (RESULTS_MULTI/, RESULTS_R
 
 If you use this code in your research, please cite our paper:
 
-**ACM Reference Format:**
-```
-Nilesh Verma, Albert Bifet, Bernhard Pfahringer, and Maroua Bahri. 2025.
-Bayesian Stream Tuner: Dynamic Hyperparameter Optimization for Real-
-Time Data Streams. In Proceedings of the 31st ACM SIGKDD Conference
-on Knowledge Discovery and Data Mining V.2 (KDD '25), August 3–7, 2025,
-Toronto, ON, Canada. ACM, New York, NY, USA, 12 pages. https://doi.org/
-10.1145/3711896.3736852
-```
-
 **BibTeX:**
 ```bibtex
 @inproceedings{verma2025bayesian,
